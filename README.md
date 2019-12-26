@@ -1,1 +1,1 @@
-# STATIC TEMPLATES
+# Restobook Template
