@@ -1,0 +1,60 @@
+<div>
+<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Update User</h1>
+                </div>
+                
+                <div class="col-lg-12">
+                
+                  <div class="col-lg-6">
+                
+                    <div class="form-group"> 
+                     <label for="exampleSelect1">First Name</label>                       
+                      <input type="text" class="form-control" placeholder="Your Name" ng-model="first_name" name="first_name">
+                    </div>
+                    <div class="form-group">  
+                    <label for="exampleSelect1">Last Name</label>                        
+                      <input type="text" class="form-control" placeholder="Last Name" ng-model="last_name" name="last_name" >
+                    </div>
+                    <div class="form-group">  
+                    <label for="exampleSelect1">Email</label>                        
+                      <input type="email" class="form-control" placeholder="Email" ng-model="email" name="email" >
+                    </div>
+                     <div class="form-group"> 
+                     <label for="exampleSelect1">Username</label>                         
+                      <input type="text" class="form-control" placeholder="Username" ng-model="username" name="username" >
+                    </div>
+                     <div class="form-group"> 
+                     <label for="exampleSelect1">Password</label>                         
+                      <input type="password" class="form-control" placeholder="Password" ng-model="password" name="password">
+                    </div>
+                    
+                    <div class="form-group">
+                    <label for="exampleSelect1">Country</label>
+                    <select class="form-control"  name="country_id" ng-model="selectedCountryMasterID">
+                      <option ng-repeat="country in chooseCountries" value="{{country.country_id}}" ng-selected="{{selectedCountryMasterID==country.country_id}}">{{country.country_name}}</option> 
+                    </select>
+                  </div>
+                  
+                   <div class="form-group">
+                    <label for="exampleSelect1">City  </label>
+                    <select class="form-control"  name="city_id" ng-model="selectedCityMasterID" >
+                    <option ng-repeat="city in cities" value="{{city.city_id}}" 
+                    ng-selected="{{selectedCityMasterID==city.city_id}}">{{city.city_name}}</option>
+                    </select>
+                  </div>
+                    
+                  <div class="form-group">    
+                  <label >Address  </label>                    
+                      <textarea placeholder="Address" rows="3" class="form-control" name="address" ng-model="address"></textarea>
+                    </div>  
+                     <div class="form-group">    
+                  <input type="submit" value="Update User" class="comment-btn btn btn-primary" ng-click="updateUserClickBtn()">
+                    </div>  
+                  
+                </div>
+                
+                
+                 </div>
+             </div>
+</div>             

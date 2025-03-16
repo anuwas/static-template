@@ -1,0 +1,137 @@
+<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">{{restaurantData.name}}</h1>
+                    <div ><img ng-src="{{restaurantData.imageData}}" style="width: 100px"/></div>
+                </div>
+                
+                <div class="col-lg-12">
+                
+                   
+   <div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <colgroup>
+      <col class="col-xs-1">
+      <col class="col-xs-7">
+    </colgroup>
+    
+    <tbody>
+       
+       <tr>
+         <td>Address</td>
+          <td>{{restaurantData.address}}, PIN {{restaurantData.pincode}}</td>
+       </tr>
+      <tr>
+         <td>Phone</td>
+          <td>{{restaurantData.phone}}</td>
+       </tr>
+       <tr>
+         <td>Email</td>
+          <td>{{restaurantData.email}}</td>
+       </tr>
+       <tr>
+         <td>Website</td>
+          <td>{{restaurantData.website}}</td>
+       </tr>
+       <tr>
+         <td>Youtube</td>
+          <td>{{restaurantData.linkYoutube}}</td>
+       </tr>
+       <tr>
+         <td>Facebook</td>
+          <td>{{restaurantData.linkFacebook}}</td>
+       </tr>
+       <tr>
+         <td>Twitter</td>
+          <td>{{restaurantData.linkTwitter}}</td>
+       </tr>
+        <tr>
+         <td>Instagram</td>
+          <td>{{restaurantData.linkIntsagram}}</td>
+       </tr>
+       <tr>
+         <td>Pinterest</td>
+          <td>{{restaurantData.linkPinterest}}</td>
+       </tr>
+       <tr>
+         <td>Photogallery</td>
+          <td>
+            <div ng-repeat="reataurantPhotogallery in reataurantPhotogallerys">
+            <div style="float:left;margin-left: 5px;border: 1px solid black">
+              <img ng-src="{{reataurantPhotogallery.photo}}"></div>
+          </div>​
+          </td>
+       </tr>
+
+      <tr>
+         <td>Timing Avaliablity</td>
+          <td>
+            <div ng-repeat="timingsAvailabilityList in timingsAvailabilityLists">
+            <div style="float:left;margin-left: 5px;padding:4px;border: 1px solid black">
+              {{timingsAvailabilityList.text}} - {{timingsAvailabilityList.chekedStr}}
+            </div>
+          </div>​
+          </td>
+       </tr>   
+       <tr>
+         <td>Meal Avaliablity</td>
+          <td>
+            <div ng-repeat="mealAvailabilityList in mealAvailabilityLists">
+            <div style="float:left;margin-left: 5px;padding:4px;border: 1px solid black">
+              {{mealAvailabilityList.text}}
+            </div>
+          </div>​
+          </td>
+       </tr> 
+       <tr>
+         <td>Cuisine Type</td>
+          <td>
+            <div ng-repeat="cuisineType in cuisineTypes">
+            <div style="float:left;margin-left: 5px;padding:4px;border: 1px solid black">
+              {{cuisineType.text}}
+            </div>
+          </div>​
+          </td>
+       </tr>  
+       <tr>
+         <td>Item Dishes</td>
+          <td>
+          <ul ng-repeat="itemDishes in itemDishess">
+          <li>
+          <table width="50%">
+            <tr>
+              <td>Dish Avaliable</td>
+              <td>:</td>
+              <td>{{itemDishes.dishAvailable}}</td>
+            </tr>
+            <tr>
+              <td>Dish Type</td>
+              <td>:</td>
+              <td>{{itemDishes.dishType}}</td>
+            </tr>
+             <tr>
+              <td>Dish Name</td>
+              <td>:</td>
+              <td>{{itemDishes.dishType}}</td>
+            </tr>
+            <tr>
+              <td>Description</td>
+              <td>:</td>
+              <td>{{itemDishes.description}}</td>
+            </tr>
+          </table>
+            
+          </li>
+          </ul>
+            
+          </td>
+       </tr> 
+       
+       
+    </tbody>
+  </table>
+</div>
+                   
+                
+                 </div>
+                
+             </div>
