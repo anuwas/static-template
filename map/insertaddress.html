@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert Address</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body ng-app="myApp" ng-controller="formCtrl">
+<div ng-include="'header.html'"></div>
+<form name="myForm">
+<table>
+	<tr>
+		<td>Name</td>
+		<td>:</td>
+		<td><input type="text" ng-model="clientName"></td>
+	</tr>
+	<tr>
+		<td>Phone Number</td>
+		<td>:</td>
+		<td><input type="text" ng-model="phoneNumber"></td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td>:</td>
+		<td><textarea rows="" cols="" ng-model="Address"></textarea></td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>:</td>
+		<td><input type="text" ng-model="city"></td>
+	</tr>
+	<tr>
+		<td>ZIP</td>
+		<td></td>
+		<td><input type="text" ng-model="zip"></td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>:</td>
+		<td><input type="text" ng-model="Country"></td>
+	</tr>
+	<tr>
+		<td>Request</td>
+		<td>:</td>
+		<td><textarea rows="" cols="" ng-model="requestText"></textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><button ng-click="formSubmit()">Submit</button></td>
+	</tr>
+</table>
+</form>
+</body>
+<script type="text/javascript">
+var infodata=[];
+var myApp=angular.module('myApp', []);
+myApp.controller("formCtrl",function($scope,$http){
+	$scope.formSubmit = function() {
+    	infodata = {clientName:$scope.clientName,"phoneNumber": $scope.phoneNumber,"Address":$scope.Address,"city":$scope.city,"zip":$scope.zip,"Country":$scope.Country,"requestText":$scope.requestText};
+    	/* var data = $.param({
+            json: JSON.stringify({
+                name: $scope.clientName
+            })
+        }); */
+       // console.log(JSON.stringify(infodata))
+    	$http.post("insertAddress.php", infodata).success(function(response, status) {
+            //console.log(response);
+            alert("Successfully Submited");
+        })
+    	
+	};
+})
+</script>
+</html>

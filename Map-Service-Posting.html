@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Jobs - Uber Mobile Healthcare</title>
+    
+    <meta name="description" content="Responsive Bootstrap App Landing Page Template">    
+    <meta name="keywords" content="Alive, Bootstrap, Landing page, Template, App, Mobile">
+    <meta name="author" content="emr4all.com">    
+    <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <link rel="icon" href="images/favicon/favicon.ico">
+    
+    <!-- SET OF FAVICONS FOR APPLE PRODUCTS -->
+    <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
+    <!-- RALEWAY FONT FROM GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,400,600,700,900' rel='stylesheet' type='text/css'>
+      
+    <!-- ELEGANT ICON PACK FOR YOUR PAGE -->
+    <link href="css/icons/elegant.css" rel='stylesheet' type='text/css'>
+    <!-- BOOTSTRAP -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="css/style-default.css" rel="stylesheet" id="theme-change">
+    <link href="css/plugins/plugins.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <style>
+    /** Style for the body **/
+ body {
+/** Style for the button & div **/
+ .myButton {
+    padding: .2em 1em;
+    font-size: 1em;
+}
+
+#myDiv {
+    color:Green;
+    background-color:#eee;
+    border:2px solid #333;
+    text-align:justify;
+}
+#myDiv p {
+    margin: 15px;
+    font-size: 0.917em;
+}
+
+
+    </style>
+ <script>
+  $(function() {
+    $( "#startDate" ).datepicker();
+     $( "#endDate" ).datepicker();
+  });
+  </script>
+</head>
+<body id="body" class="page-loading" ng-app="">
+<!-- =========================
+     PRELOADER
+============================== -->
+    <div id="preloader">
+        <div id="loading"></div>
+    </div>
+    <nav id="mainmenu" class="navbar navbar-fixed-top main-menu head-menu auto-height" role="navigation">
+        <div class="container">
+         <div class="col-sm-3 col-xs-12">
+         <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt> </a>
+         </div>
+          <div class="col-sm-4" style="margin-top:10px;"> <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div style=" padding-top:10px;" class="topli"> 
+                  <ul>
+                      <li> <a href="service-provider.html"> Find Service Provider </a></li>
+                      <li>|</li>
+                      <li> <a href="message.html"> Message </a> </li>
+                      <li>|</li>
+                      <li> <a href="report.html"> Report </a> </li>
+                  </ul>
+            </div>
+          </div>
+          <div class="col-sm-5 col-xs-12"> 
+          
+            <div id="navbar" class="navbar-collapse collapse">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#"> Ram Kumar </a></li>
+                        <li><a href="profile.html"> Manage Profile </a></li>
+                        <li><a href="sign-up.html" class="btn btn-primary"> SIGN OUT</a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>           
+        </div>
+    </nav>
+    
+    <div class="fixedspace"></div>
+    <div style="clear:both;"></div>
+    <section id="navigation">
+       <div class="container">
+              <div class="row">
+                   <ul class="pfmenu">
+                      <li> <a href="dasboard-agency.html">Dasboard </a></li>
+                      <li> <a href="My-Profile.html">My Profile </a></li>
+                      <li> <a href="Manage-Admin.html">Manage Admin </a></li>
+                      <li> <a href="Manage-Staff.html">Manage Staff </a></li>
+                      <li> <a href="Manage-Service-Posting.html" class="active">Manage Service Posting </a></li>
+                      <li> <a href="Tracking-Service-Postings.html">Tracking service postings</a></li>
+                   </ul>
+               </div>
+           </div>
+    </section>
+    
+    <section id="about" style="margin-bottom:0px !important;">
+    
+      <div class="about-cont bg-grey about-to-right">
+          <div class="container">
+              <div class="row">
+                <div class="col-md-3"> 
+                   <div class="space"> 
+                      <div class="wbgboder"><a href="Post-New-Service.html">Post New Service</a> </div> 
+                      <div class="wbgboder"><a href="Manage-Service-Posting.html">Switch View List</a> </div>
+                   
+                   <div><input name="zipcode" type="text" placeholder="Zip Code" style=" width:100%;"> </div>
+                   <h4 style="font-size:14px;margin-bottom:5px;">Service Provider Name</h4>
+                   <div> <select name="spname" style="width:100%;">
+                   <option> Nick Name</option>
+                   <option> Nick Name</option>
+                   <option> Nick Name</option>
+                   </select></div>
+                   <h4 style="font-size:14px;margin-bottom:5px;">Service Request Status</h4>
+                   <div> <select name="spname" style="width:100%;">
+                   <option> New</option>
+                   <option> New and Book</option>
+                   </select></div>
+                   <h4 style="font-size:14px; margin-bottom:5px;">Discipline </h4>
+                   <div> <table width="100%" border="0">
+  <tr>
+    <td class="wbgboder" width="48%"><input name="md" type="checkbox" value=""> MD</td>
+    <td width="4%">&nbsp;</td>
+    <td class="wbgboder" width="48%"><input name="md" type="checkbox" value="" > Nurse</td>
+  </tr>
+  <tr><td style="height:8px;"></td></tr>
+  <tr>
+    <td class="wbgboder"><input name="md" type="checkbox" value=""> PT</td>
+    <td>&nbsp;</td>
+    <td class="wbgboder"><input name="md" type="checkbox" value=""> OT</td>
+  </tr>
+   <tr><td style="height:8px;"></td></tr>
+  <tr>
+    <td class="wbgboder"> <input name="md" type="checkbox" value=""> Speech</td>
+    <td>&nbsp;</td>
+    <td class="wbgboder"> <input name="md" type="checkbox" value=""> CNA</td>
+  </tr>
+  
+</table>
+</div>
+                   
+                   <h4 style="font-size:14px;margin-bottom:5px;">Time </h4>
+                   <div> <select name="spname" style="width:100%;">
+                            <option>Morning</option>
+                            <option>Mid-day</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                   </select> </div>
+                   <h4 style="font-size:14px; margin-bottom:5px;">Date </h4>
+                   <div><input type="text" name="startDate" id="startDate"  placeholder="Start Date"  style="width:100%"> </div>
+                   <div style="height:8px;"></div>
+                   <div><input name="endDate" type="text" name="endDate" id="endDate"  placeholder="End date" style="width:100%"> </div>
+                   </div>
+                   
+                </div>
+                <div class="col-md-9"> 
+                     
+                    <div class="wbgcolor" style="margin-top:14px;">
+                        <div id="map-canvas" style="height:480px;" /></div>
+                    </div>
+                    
+                </div> 
+                
+              </div>
+          </div>
+      </div>      
+    </section>
+    <section id="contact" class="caption-margin">
+     
+      <div id="contact-more">
+          <div class="container anim-fade-up">
+            <div class="col-sm-3 col-xs-12">
+                <h6>Uber Mobile Healthcare</h6>
+                <p>Proudly made in<br/>Katowice, Silesia, Poland</p> 
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                <h6>Find us on a map</h6>
+                <ul>
+                    <li><a href="#">Our office on Google Maps</a></li>
+                    <li><a href="#">Our surroundings on Street View</a></li>
+                </ul>               
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                <h6>Call us today</h6>
+                <ul>
+                    <li><span>Mobile: </span><a href="#">+123 456 789 123</a></li>
+                    <li><span>Office:</span><a href="#">+123 45 678 901 234</a></li>
+                </ul>               
+            </div>
+            <div class="col-sm-3 col-xs-12">
+                <h6>Drop us a line</h6>
+                <p class="breakit"><a href="#">support@ubermobilehealthcare.com </a></p>               
+            </div>            
+          </div>
+      </div>
+    </section>
+
+	<style>
+  .toggler { width: 500px; height: 200px; position: absolute; border: 1px solid #cccccc;z-index:1;top: 200px;right: -351px; background:#fff; padding:5px;}
+  .newClass { width: 500px; height: 200px; position: absolute; border: 1px solid #cccccc;z-index:1;top: 200px;right: 0px; background:#fff;padding:5px;}
+  .bgcbt{ background:#026dc5; color:#fff; border:0px; padding:5px 8px;}
+  .bgcbt:hover{ background:#2799f7}
+  .icmp{ margin:5px 0px;} 
+  .icmp img{ padding-left:12px;}
+  .space{ overflow:scroll !important; height:520px;}
+  </style>
+  <script>
+  $(function() {
+    $( "#button" ).click(function() {
+      $( ".toggler" ).toggleClass( "newClass", 1000 );
+    });
+  });
+  </script>
+<div class="toggler">
+<div><button id="button" class="bgcbt">View</button></div>
+<div class="icmp"><img src="images/icons/green-dot.png"> &nbsp; &nbsp; &nbsp; Service request not yet booked by a SP.</div>
+<div class="icmp"><img src="images/icons/red-dot.png"> &nbsp; &nbsp; &nbsp; Service request booked by SP.</div>
+<div class="icmp"><img src="images/icons/yellow-dot.png"> &nbsp; &nbsp; &nbsp; Service request active per the request date/time stamp.</div>
+<div class="icmp"><img src="images/icons/blue-dot.png"> &nbsp; &nbsp; &nbsp; Service request is completed.</div>
+</div>
+<div style="position: absolute;width: 500px;height: 200px;right: -423px;top: 200px;background: #f3f3f3;;z-index: 2"></div>
+ 
+
+<!-- =========================
+     FOOTER
+============================== -->
+    <footer>
+      <div class="container anim-fade-up">
+        
+          <!-- HELP US SPREAD THE UMH :-) -->
+          <div class="col-sm-3 col-xs-12 hidden-xs">&copy; 2016 UMH, All rights reserved.</div>
+          <div class="col-sm-6">
+              <a href="#"><div class="sm"> <span class="elegant social_facebook"></span></div></a>
+              <a href="#"><div class="sm"><span class="elegant social_twitter"></span></div></a>
+              <a href="#"><div class="sm"> <span class="elegant social_googleplus"></span></div></a>
+              <a href="#"><div class="sm"><span class="elegant social_instagram"></span></div></a>
+              <a href="#"><div class="sm"><span class="elegant social_youtube"></span></div></a>
+              <a href="#"><div class="sm"><span class="elegant social_vimeo"></span></div></a>    
+          </div>
+          <div class="col-sm-3 col-xs-12"> <img src="images/footer.png" style="margin-top:-10px;"/></div> 
+      </div>
+    </footer>
+<!-- =========================
+     JS SCRIPTS
+============================== -->
+    <!-- JQUERY -->
+     
+   
+    <script type="text/javascript" src="js/bootstrap.js"> </script>
+  
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
+    
+    <script type="text/javascript" src="js/parallax.js" id="parallax-change"></script>
+    
+    <script type="text/javascript"  src="js/headroom.min.js"></script>      
+    
+	<script type="text/javascript"  src="js/jQuery.headroom.js"></script>
+    
+    <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+    
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    
+    <script type="text/javascript" src="js/validator.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+	
+
+</body>
+</html>

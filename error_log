@@ -1,0 +1,18 @@
+[22-May-2016 14:36:39 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 9
+[22-May-2016 14:36:39 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 10
+[22-May-2016 14:36:39 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 12
+[22-May-2016 14:36:39 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 14
+[22-May-2016 14:36:42 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 9
+[22-May-2016 14:36:42 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 10
+[22-May-2016 14:36:42 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 12
+[22-May-2016 14:36:42 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 14
+[22-May-2016 14:37:04 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 9
+[22-May-2016 14:37:04 UTC] PHP Warning:  mysqli_query(): Couldn't fetch mysqli in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 10
+[22-May-2016 14:37:04 UTC] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 12
+[22-May-2016 14:37:04 UTC] PHP Fatal error:  Call to a member function fetch_assoc() on a non-object in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/getAddress.php on line 14
+[22-May-2016 14:57:19 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/dbConnection.php on line 8
+[22-May-2016 14:57:21 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/dbConnection.php on line 8
+[22-May-2016 15:02:03 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/dbConnection.php on line 8
+[22-May-2016 15:02:12 UTC] PHP Warning:  mysqli::mysqli(): (28000/1045): Access denied for user 'root'@'localhost' (using password: YES) in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/dbConnection.php on line 8
+[22-May-2016 15:31:35 UTC] PHP Notice:  Undefined property: stdClass::$id in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/updateAddress.php on line 15
+[22-May-2016 15:32:07 UTC] PHP Notice:  Undefined property: stdClass::$id in /home/scwadmin/public_html/ubermobilehealthcare.com/UMH/map/updateAddress.php on line 15

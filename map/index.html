@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<style>
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+</head>
+<body ng-app="myApp" ng-controller="customersCtrl">
+<div ng-include="'header.html'"></div>
+<div > 
+<br>
+<table>
+	<tr>
+	<td valign="top">
+	<table>
+<tr>
+	<td>Name</td>
+	<td>Address</td>
+	<td>City</td>
+	<td>ZIP</td>
+	<td>Country</td>
+	<td>Marker</td>
+	<td>Operation</td>
+</tr>
+  <tr ng-repeat="x in names">
+    <td id="{{$index}}_Name">{{ x.Name }}</td>
+    <td id="{{$index}}_Addres">{{ x.Address }}</td>
+    <td id="{{$index}}_City">{{ x.City }}</td>
+    <td id="{{$index}}_ZipCode">{{ x.ZipCode }}</td>
+    <td id="{{$index}}_ZipCode">{{ x.Country}}</td>
+    <td >{{ x.marker }}</td>
+    <td><button   ng-click="EditItem(x.id,$index)">Edit</button></td>
+  </tr>
+</table>
+	
+	</td>
+	<td valign="top">
+	<form name="myForm">
+<table>
+	<tr>
+		<td>Name</td>
+		<td>:</td>
+		<td><input type="text" ng-model="clientName"></td>
+	</tr>
+	<tr>
+		<td>Phone </td>
+		<td>:</td>
+		<td><input type="text" ng-model="phoneNumber"></td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td>:</td>
+		<td><textarea rows="" cols="" ng-model="Address"></textarea></td>
+	</tr>
+	<tr>
+		<td>City</td>
+		<td>:</td>
+		<td><input type="text" ng-model="city"></td>
+	</tr>
+	<tr>
+		<td>ZIP</td>
+		<td></td>
+		<td><input type="text" ng-model="zip"></td>
+	</tr>
+	<tr>
+		<td>Country</td>
+		<td>:</td>
+		<td><input type="text" ng-model="Country"></td>
+	</tr>
+	<tr>
+		<td>Request</td>
+		<td>:</td>
+		<td><textarea rows="" cols="" ng-model="requestText"></textarea></td>
+	</tr>
+	<tr>
+		<td>Marker</td>
+		<td>:</td>
+		<td><input type="text" ng-model="marker"><br>
+		(blue-dot.png,green-dot.png,red-dot.png)
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><button ng-click="formSubmit()">Submit</button>
+		<input type="hidden" ng-model="id">
+		</td>
+	</tr>
+</table>
+	</td>
+	</tr>
+</table>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('customersCtrl', function($scope, $http) {
+    $http.get("addressList.php")
+    .then(function (response) {
+    	$scope.names = response.data.records;
+    	}
+   
+    );
+   
+    
+    $scope.EditItem=function(id,index){
+    	$scope.clientName=$scope.clientName;
+    	$scope.id=id;
+    	//var clientName = $document[0].getElementById(index+'_Name').html;
+    	//console.log($scope.names[index]);
+    	
+    	$scope.clientName=$scope.names[index].Name;
+    	$scope.phoneNumber=$scope.names[index].phoneNumber;
+    	$scope.Address=$scope.names[index].Address;
+    	$scope.city=$scope.names[index].City;
+    	$scope.zip=$scope.names[index].ZipCode;
+    	$scope.Country=$scope.names[index].Country;
+    	$scope.requestText=$scope.names[index].Request;
+    	$scope.marker=$scope.names[index].marker;
+    }
+    
+    $scope.formSubmit=function(){
+    	infodata = {id:$scope.id,clientName:$scope.clientName,"phoneNumber": $scope.phoneNumber,"Address":$scope.Address,"city":$scope.city,"zip":$scope.zip,"Country":$scope.Country,"requestText":$scope.requestText,marker:$scope.marker};
+    	$http.post("updateAddress.php", infodata).success(function(response, status) {
+            //console.log(response);
+            alert("Successfully Updated");
+        })
+    }
+});
+</script>
+</body>
+</html>
